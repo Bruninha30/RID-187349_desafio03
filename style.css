@@ -1,0 +1,185 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+
+}
+
+/* Fonte e fundo */
+body {
+  font-family: 'Rubik', sans-serif;
+  padding: 2rem;
+  background: linear-gradient(135deg, #F0F4FF, #E8EDF9);
+
+
+}
+
+/* Título principal */
+h1 {
+  color: #11175E;
+  font-size: 3rem;
+  padding: 1rem;
+
+}
+
+/* Estrutura principal */
+main,
+footer {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(131, 124, 124, 0.05);
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+form input {
+  padding: 0.8rem;
+  border: 1px solid #eeeeee;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background-color: #fff;
+}
+
+
+
+form button {
+  padding: 0.8rem;
+  background: #2D70FD;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+/* Botão "Concluir" */
+.botao-azul {
+  padding: 1rem 1.1rem;
+  background-color: #2D70FD;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Lista de tarefas */
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+li {
+  background: #FFFFFF;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  border: 0.1rem solid #e1dede;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li.concluida {
+  text-decoration: line-through;
+  color: #888;
+}
+
+/* Título da tarefa */
+.titulo-tarefa {
+  font-weight: bold;
+  color: #001747;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Etiqueta da tarefa */
+.etiqueta-tarefa {
+  font-size: 0.9rem;
+  color: #B1BACB;
+  margin: 0;
+}
+
+.etiqueta-com-borda {
+  border: 1px solid #c5c6c7;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-weight: 500;
+}
+#nomeTarefa::placeholder {
+  color: #B1BACB;
+}
+
+#etiqueta::placeholder {
+  color: #B1BACB;
+  
+}
+
+/* Rodapé */
+footer p {
+  text-align: right;
+  font-size: 1rem;
+  color: #B1BACB;
+  border: 1px solid #eeeeee;
+  padding: 1rem;
+  border-radius: 0.7rem;
+  margin-top: 1rem;
+}
+
+/* Responsivo para desktop */
+@media (min-width: 600px) {
+  form {
+    flex-direction: row;
+  }
+
+  form input {
+    flex: 1;
+  }
+
+  form button {
+    width: 3rem;
+  }
+}
+/* Layout para mobile */
+@media (max-width: 599px) {
+  h1 {
+    font-size: 2rem;
+    padding: 0.5rem;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  form input, form button {
+    width: 100%;
+    align-items: center;
+  }
+
+  li {
+    flex-direction: column;
+    align-items:center;
+    gap: 0.5rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+    text-align: right;
+    justify-content: center;
+  }
+}
+
